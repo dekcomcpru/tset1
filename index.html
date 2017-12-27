@@ -1,0 +1,281 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="./sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="./sweetalert2.min.css">
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .A {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(219, 203, 203);
+            padding-top: 20%;
+        }
+
+        .B {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(158, 167, 138);
+            padding-top: 20%;
+        }
+
+        .C {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(186, 185, 199);
+            padding-top: 20%;
+        }
+
+        .D {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(184, 156, 175);
+            padding-top: 20%;
+        }
+
+        .E {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(179, 190, 226);
+            padding-top: 20%;
+        }
+
+        .F {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(176, 214, 176);
+            padding-top: 20%;
+        }
+
+        .G {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(176, 176, 214);
+            padding-top: 20%;
+        }
+
+        .H {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(214, 176, 190);
+            padding-top: 20%;
+        }
+
+        .I {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(206, 214, 176);
+            padding-top: 20%;
+        }
+
+        .J {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(184, 176, 214);
+            padding-top: 20%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="A">
+        <center>
+            <h1>1.เทคนิคกดเปลี่ยนข้อความ</h1>
+
+            <p id="a">Hello JavaScript.</p>
+
+            <button type="button" onclick='document.getElementById("a").innerHTML = "สวัสดีชาวโลก"'>Click</button>
+        </center>
+
+
+
+    </div>
+    <div class="B">
+        <center>
+
+            <h1>2.เทคการเปลี่ยนขนาดของข้อความ</h1>
+
+            <p id="B">นายวันเฉลิม นะโนนชัย</p>
+
+            <button type="button" onclick="document.getElementById('B').style.fontSize='40px'">Click </button>
+        </center>
+
+    </div>
+    <div class="C">
+        <center>
+
+            <h1>3.เทคนิคการซ้อนข้อความ</h1>
+
+            <p id="c">การซ้อนข้อความ JavaScript</p>
+
+            <button type="button" onclick="document.getElementById('c').style.display='none'">Click</button>
+        </center>
+    </div>
+    </div>
+    <div class="D">
+        <center>
+
+            <h1>4.เทคนิคการแสดงข้อความที่ซ้อนอยู่</h1>
+
+            <p id="d" style="display:none">Hello JavaScript</p>
+
+            <button type="button" onclick="document.getElementById('d').style.display='block'">Click</button>
+        </center>
+    </div>
+
+    <div class="E" id="w5">
+        <center>
+            <h1>5.เทคนิคแสดง Alert คำถามให้ตอบว่า Yes or No </h1>
+            <button onclick="w5()">Click</button>
+            <script>
+                function w5() {
+                    swal({
+
+                        title: 'คุณอายุ 90 ใช่ไหม',
+                        text: "",
+                        type: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes',
+                        cancelButtonText: 'No',
+                    }).then((result) => {
+                        if (result.value) {
+                            swal(
+                                'คุณเเก่',
+                                'ไม่น่าเชื่อว่าอายุคูณจะ 90 จริงๆ',
+                                'success'
+                            )
+                        }
+                    })
+                }
+            </script>
+        </center>
+    </div>
+
+    <div class="F">
+        <center>
+            <h1>6.เทคนิคการเรียงลำดับค่าอาเรย์จากน้อยไปหามาก</h1>
+            <br>
+            <button onClick="g()">Click </button>
+            <p id="deme"></p>
+            <script>
+                var points = [7, 1, 6, 5, 4, 3, 2];
+                document.getElementById("deme").innerHTML = points;
+
+                function g() {
+                    points.sort(function (a, b) { return a - b });
+                    document.getElementById("deme").innerHTML = points;
+                }
+            </script>
+            <br>
+            <br>
+    </div>
+
+
+    <div class="G">
+        <center>
+            <h1>7.เทคนิคการเปลี่ยนสีของรูปภาพ</h1>
+            <br>
+            <p>JavaScript สามารถเปลี่ยนแอตทริบิวต์ HTML ได้</p>
+            <p>ในกรณีนี้ JavaScript จะเปลี่ยนแอตทริบิวต์ src (source) ของรูปภาพ.</p>
+            <br>
+            <br>
+
+            <button onclick="document.getElementById('h').src='aaa.jpg'">เปิด</button>
+
+            <img id="h" src="aaa.jpg" style="width:100px">
+
+            <button onclick="document.getElementById('h').src='acb.jpg'">ปิด</button>
+
+        </center>
+    </div>
+
+    <div class="H">
+        <center>
+            <h1>8.เทคนิคการปิดอัตโนมัต</h1>
+            <br>
+            <button onclick="h()">Click</button>
+            <script>
+                function h() {
+                    swal({
+                        title: 'Auto close alert!',
+                        text: 'I will close in 5 seconds.',
+                        timer: 5000,
+                        onOpen: () => {
+                            swal.showLoading()
+                        }
+                    }).then((result) => {
+                        if (result.dismiss === 'timer') {
+                            console.log('I was closed by the timer')
+                        }
+                    })
+                }
+            </script>
+        </center>
+    </div>
+
+    
+    <div class="I">
+            <center>
+                <h1>9.เทคนิคข้อความเตือนพร้อมฟังก์ชันที่ต่ออยู่กับปุ่ม "ยืนยัน" </h1>
+                <br>
+                <button onclick="i()">Click</button>
+                
+                <script>
+                    function i() {
+                   swal({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                  }).then((result) => {
+                    if (result.value) {
+                      swal(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                      )
+                    }
+                  }) 
+        }
+                </script>
+            </center>
+        </div>
+
+        <div class="J">
+                <center>
+                    <h1>10.เทคนิคข้อความแสดงข้อผิดพลาด </h1>
+                    <br>
+                    <button onclick="j()">Click</button>
+                    
+                    <script>
+                        function j() {
+                            swal(
+                                'Oops...',
+                                'Something went wrong!',
+                                'error'
+                              )
+            }
+                    </script>
+                </center>
+            </div>
+
+
+</body>
+
+</html>
